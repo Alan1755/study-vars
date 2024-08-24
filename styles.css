@@ -1,87 +1,109 @@
-/* Estilizando a navbar */
-.navbar {
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    border-radius: 8px; 
-    /* Adiciona bordas arredondadas */
-    padding: 10px; 
-    /* Adiciona um pouco de padding para melhor aparência */
-  }
-  
-  body {
-    margin: 0;
-  }
-  
-  .navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex: 1;
-  }
-  
-  .navbar li {
-    float: left;
-  }
-  
-  .navbar li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    border-radius: 10px; 
-    /* Arredonda os links dentro da navbar */
-  }
-  
-  .navbar li a:hover {
-    background-color: #111;
-  }
-  
-  /* Estilizando a barra de pesquisa */
-  .navbar input[type="text"] {
-    padding: 6px;
-    margin-right: 1000px;
-    font-size: 17px;
-    border: none;
-    border-radius: 10px; 
-    /* Arredonda a barra de pesquisa */
-  }
-  
-  .navbar button {
-    padding: 6px 10px;
-    
-    border: none;
-    cursor: pointer;
-    border-radius: 10px; 
-    /* Arredonda o botão */
-  }
-  
-  .navbar button:hover {
-    background-color: #555;
-    
-  }
-  
-  .jonas {
-    margin-left: -950px;
-  }
-  /* Estilizando o papel de parede */
-  
-  body {
-    background-image: url("dbd.jpg");
-    background-size: cover; /* O GIF irá cobrir toda a tela */
-    background-repeat: no-repeat; /* O GIF não se repetirá */
-    background-attachment: fixed; /* O GIF permanecerá fixo ao rolar a página */
-    background-position: center; /* Centraliza o GIF */
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    color: white; /* Ajusta a cor do texto para contraste com o fundo */
-  }
+/* Definindo variáveis CSS globais para reutilização */
+:root {
+  --main-bg-color: #000; /* Cor de fundo principal */
+  --main-text-color: white; /* Cor principal do texto */
+  --navbar-hover-bg-color: #111; /* Cor de fundo da navbar ao passar o mouse */
+  --border-radius: 10px; /* Raio padrão para bordas arredondadas */
+}
 
-  .pedro {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    width: 500px;
-  }
+/* Estilizando o corpo da página */
+body {
+  background-color: var(--main-bg-color); /* Aplicando a cor de fundo principal */
+  background-image: url("dbd.jpg"); /* Definindo a imagem de fundo */
+  background-size: cover; /* Cobrir toda a tela com a imagem */
+  background-repeat: no-repeat; /* Não repetir a imagem de fundo */
+  background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
+  background-position: center; /* Centraliza a imagem de fundo */
+  margin: 0; /* Remove margens padrão do body */
+  padding: 0; /* Remove padding padrão do body */
+  font-family: Arial, sans-serif; /* Define a fonte do texto */
+  color: var(--main-text-color); /* Aplica a cor principal do texto */
+}
+
+/* Estilizando a barra de navegação */
+.navbar {
+  overflow: hidden; /* Garante que o conteúdo da navbar não extrapole */
+  display: flex; /* Usa flexbox para organizar os itens da navbar */
+  align-items: center; /* Alinha verticalmente os itens da navbar */
+  border-radius: var(--border-radius); /* Aplica bordas arredondadas */
+  padding: 10px; /* Adiciona padding interno */
+  background-color: transparent; /* Remove a cor de fundo da navbar */
+}
+
+/* Estilizando a lista de itens na navbar */
+.navbar ul {
+  list-style-type: none; /* Remove os marcadores da lista */
+  margin: 0; /* Remove margens padrão da lista */
+  padding: 0; /* Remove padding padrão da lista */
+  display: flex; /* Organiza os itens da lista em linha */
+  flex: 1; /* Faz a lista ocupar o espaço disponível */
+  align-items: center; /* Alinha verticalmente os itens da lista */
+  justify-content: space-between; /* Distribui espaço entre os itens da lista */
+}
+
+/* Estilizando os itens da lista na navbar */
+.navbar li {
+  margin-right: 20px; /* Espaçamento entre os itens da lista */
+}
+
+/* Estilizando os links na navbar */
+.navbar li a {
+  display: block; /* Faz o link ocupar o espaço completo do item */
+  color: var(--main-text-color); /* Aplica a cor principal do texto */
+  text-align: center; /* Centraliza o texto dentro do link */
+  padding: 14px 20px; /* Adiciona padding interno ao link */
+  text-decoration: none; /* Remove sublinhado dos links */
+  border-radius: var(--border-radius); /* Aplica bordas arredondadas aos links */
+}
+
+/* Estilo do link ao passar o mouse */
+.navbar li a:hover {
+  background-color: var(--navbar-hover-bg-color); /* Cor de fundo ao passar o mouse */
+}
+
+/* Contêiner para a barra de pesquisa */
+.search-container {
+  display: flex; /* Usa flexbox para alinhar o campo de pesquisa e o botão */
+  align-items: center; /* Alinha verticalmente o input e o botão */
+}
+
+/* Estilizando o campo de pesquisa na navbar */
+.navbar input[type="text"] {
+  padding: 6px; /* Adiciona padding interno ao campo de pesquisa */
+  font-size: 17px; /* Define o tamanho da fonte no campo de pesquisa */
+  border: none; /* Remove bordas padrão do campo de pesquisa */
+  border-radius: var(--border-radius); /* Aplica bordas arredondadas */
+  border-top-right-radius: 0; /* Remove o arredondamento no canto superior direito */
+  border-bottom-right-radius: 0; /* Remove o arredondamento no canto inferior direito */
+}
+
+/* Estilizando o botão de pesquisa na navbar */
+.navbar button {
+  padding: 6px 10px; /* Adiciona padding interno ao botão */
+  border: none; /* Remove bordas padrão do botão */
+  cursor: pointer; /* Altera o cursor para pointer ao passar sobre o botão */
+  border-radius: var(--border-radius); /* Aplica bordas arredondadas ao botão */
+  border-top-left-radius: 0; /* Remove o arredondamento no canto superior esquerdo */
+  border-bottom-left-radius: 0; /* Remove o arredondamento no canto inferior esquerdo */
+}
+
+/* Estilo do botão ao passar o mouse */
+.navbar button:hover {
+  background-color: #555; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Estilizando o texto com a classe "pedro" */
+.pedro {
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+  padding: 10px; /* Adiciona padding interno ao elemento */
+  border-radius: var(--border-radius); /* Aplica bordas arredondadas */
+  max-width: 500px; /* Define a largura máxima do texto */
+  margin: 20px auto; /* Centraliza o texto e adiciona espaçamento vertical */
+}
+
+/* Estilo para o foco em links e botões na navbar */
+.navbar li a:focus,
+.navbar button:focus {
+  outline: 2px solid #555; /* Adiciona contorno ao focar no link ou botão */
+  outline-offset: 2px; /* Distância entre o contorno e o elemento */
+}
