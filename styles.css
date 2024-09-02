@@ -8,7 +8,7 @@
 
 /* Estilizando o corpo da página */
 body {
-  background-color: #000; /* Aplicando a cor de fundo principal */
+  background-color: #ffffff; /* Aplicando a cor de fundo principal */
   background-image: url("dbd.jpg"); /* Definindo a imagem de fundo */
   background-size: cover; /* Cobrir toda a tela com a imagem */
   background-repeat: no-repeat; /* Não repetir a imagem de fundo */
@@ -28,7 +28,7 @@ body {
   overflow: hidden; /* Garante que o conteúdo da navbar não extrapole */
   display: flex; /* Usa flexbox para organizar os itens da navbar */
   align-items: center; /* Alinha verticalmente os itens da navbar */
- /* border-radius: 100px; /* Aplica bordas arredondadas */
+  border-radius: 100px; /* Aplica bordas arredondadas */
   padding: 10px; /* Adiciona padding interno */
   background-color: transparent; /* Remove a cor de fundo da navbar */
 }
@@ -95,9 +95,15 @@ body {
   background-color: #faf6f6; /* Cor de fundo do botão ao passar o mouse */
 }
 
+
+.Titulo {
+  background-color: rgba(32, 32, 32, 0.7);
+
+ }
+
 /* Estilizando o texto com a classe "pedro" */
 .pedro {
-  background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+  background-color: rgba(204, 184, 184, 0.7); /* Fundo semi-transparente */
   padding: 10px; /* Adiciona padding interno ao elemento */
   border-radius: var(--border-radius); /* Aplica bordas arredondadas */
   max-width: 500px; /* Define a largura máxima do texto */
